@@ -15,11 +15,12 @@
 
 html, body {
     font-family: 'Martel Sans', 'Roboto', Arial, Helvetica, sans-serif;
+    font-size: 16px;
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
-    
+    overflow: hidden;
 }
 
 .container {
@@ -27,23 +28,23 @@ html, body {
     margin: 0 auto;
 }
 
-/* .diagonal-parent {
+.diagonal-parent {
     position: relative;
-    height: 100;
+    height: 100%;
     width: 100%;
-    border: 5px solid green;
+    /* z-index: 1 */
 }
 
 .diagonal-gradient {
     position: absolute;
-    width: 50%;
+    width: 125%;
     height: 100%;
-    top: -100px;
-    right: 50px;
-    padding: 50px;
+    top: -550px;
+    left: -300px;
+    transform: rotate(170deg);
     background: linear-gradient(var(--gradientColorZero), var(--gradientColorOne), var(--gradientColorTwo), var(--gradientColorThree));
-    border: 5px solid orange;
-} */
+    /* z-index: 1; */
+}
 
 
 /* HEADER STYLES */
@@ -58,7 +59,7 @@ header {
 }
 
 nav {
-    background: #000;
+    /* background: #000; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -81,6 +82,11 @@ nav a:hover {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
+}
+
+.block-1 a{
+    display: flex;
     align-items: center;
 }
 
@@ -136,15 +142,23 @@ nav a:hover {
 /* SECTION CONFIGS */
 
 .section {
+    /* position: relative;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    height: 100%;
+    width: 100%; */
     display: flex;
     flex-direction: row;
     padding: 145px 0;
-    /* line-height: 1px; */
+    line-height: 20px;
+    font-weight: 700;
 }
 
 .sub-section-1 {
     width: 50%;
     height: 100%;
+    font-size: 1em;
 }
 
 .sub-section-2 {
@@ -154,13 +168,8 @@ nav a:hover {
 
 /* SECTION CONFIGS END */
 
-.sub-section-1 {
-    font-size: .9em;
-    width: 50%;
-}
-
 .event-container {
-    font-size: .8em;
+    font-size: .9em;
     width: fit-content;
     color: #fff;
     border-radius: 25px;
@@ -183,6 +192,7 @@ nav a:hover {
 .title-container h1{
     font-size: 4em;
     font-weight: 800;
+    line-height: 1.2em;
 }
 
 .btn-container {
@@ -191,6 +201,8 @@ nav a:hover {
 }
 
 .btn-container a {
+    display: flex;
+    align-items: center;
     text-decoration: none;
     color: rgb(58, 58, 58);
 }
@@ -200,4 +212,9 @@ nav a:hover {
     color: #fff;
     padding: 5px 8px;
     border-radius:25px;
+}
+
+.btn-container a:nth-child(1):hover {
+    background: rgb(58, 58, 58, 0.7);
+    transition: background 500ms;
 }
